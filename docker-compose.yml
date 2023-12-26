@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  demo-docker-service:
+    container_name: docker-service-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9981:9981"
+    volumes:
+      - .:/opt/app-dev
+
